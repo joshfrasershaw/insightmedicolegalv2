@@ -208,3 +208,49 @@
  .story:before{left:-380px}
  .story:after{right:-390px}
 }
+
+/* Sitewide cookie notice and mobile polish */
+.cookie-notice[hidden]{display:none!important}
+.cookie-notice{
+ position:fixed;z-index:1000;left:50%;bottom:max(16px,env(safe-area-inset-bottom));
+ transform:translateX(-50%);width:min(850px,calc(100vw - 32px));max-height:calc(100dvh - 32px);
+ overflow-y:auto;display:flex;align-items:center;gap:26px;
+ padding:24px 28px;background:#f9f7f2;border:1px solid #c4d5cb;
+ border-top:4px solid var(--accent);border-radius:12px;
+ box-shadow:0 18px 55px rgba(10,35,37,.24);color:var(--ink)
+}
+.cookie-notice__body{min-width:0;flex:1}
+.cookie-notice h2{font-family:Georgia,'Times New Roman',serif;font-size:25px;line-height:1.1;letter-spacing:-.025em;font-weight:400;margin:0 0 8px}
+.cookie-notice p{margin:0;font-size:14px;line-height:1.6;color:#425e5c}
+.cookie-notice p a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.cookie-notice__dismiss{flex-shrink:0;min-width:116px;min-height:46px;background:var(--ink);border:0;border-radius:3px;color:#fff;font-weight:700;cursor:pointer;padding:13px 22px}
+.cookie-notice__dismiss:hover{background:#296367}
+.cookie-notice__reopen{font:inherit;font-size:13px;color:inherit;background:transparent;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.cookie-notice__reopen:hover{color:#fff}
+.cookie-notice__dismiss:focus-visible,.cookie-notice__reopen:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:700px){
+ .header{gap:12px}
+ .nav{gap:10px;min-width:0}
+ .nav a{min-height:44px;display:inline-flex;align-items:center}
+ .nav-cta{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+ .hero h1{overflow-wrap:normal}
+ .page-header h1{font-size:clamp(36px,9vw,52px);overflow-wrap:break-word}
+ .page-header{padding-top:68px;padding-bottom:77px}
+ .contact-panel,.contact-page-columns{min-width:0}
+ .contact-method a{max-width:100%}
+ .cookie-notice{padding:22px 20px;gap:16px;flex-direction:column;align-items:stretch;bottom:max(10px,env(safe-area-inset-bottom));width:calc(100vw - 20px);max-height:calc(100dvh - 20px)}
+ .cookie-notice h2{font-size:23px}
+ .cookie-notice p{font-size:14px}
+ .cookie-notice__dismiss{width:100%;min-height:48px}
+}
+@media(max-width:380px){
+ .header{padding:16px}
+ .brand{font-size:22px}
+ .nav-cta{padding:10px 12px}
+ .hero .hero-card{padding:38px 24px}
+ .hero h1{font-size:clamp(39px,11vw,49px)}
+ .page-shell{padding-inline:18px}
+ .contact-panel{padding:24px 20px}
+ .contact-method a{font-size:clamp(12px,3.4vw,16px);white-space:normal;overflow-wrap:anywhere}
+ .page-actions a{max-width:100%}
+}
