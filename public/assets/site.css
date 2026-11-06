@@ -105,3 +105,18 @@
 .site-footer-brand{display:flex;flex-direction:column;gap:7px}.footer small{max-width:430px}.site-footer-brand small{font-size:10px}
 @media(max-width:800px){.page-header{padding:80px 6vw}.page-shell{padding:70px 6vw}.page-columns{grid-template-columns:1fr;gap:35px}.steps-list{grid-template-columns:1fr}.page-card-grid{grid-template-columns:1fr}.report-detail-list{grid-template-columns:1fr}.credential-panel{padding:32px}.footer-links{justify-content:flex-start}}
 @media(max-width:480px){.page-header h1{font-size:51px}.page-card{padding:28px}.contact-panel{padding:27px}.page-header{padding:70px 24px}.page-shell{padding:65px 24px}.page-copy p{font-size:16px}.report-detail-list li{padding:23px}}
+
+/* Restrained editorial refinements — November 2026 */
+.page-kicker,.step-number,.specialisms{display:none!important}
+.page-card-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.page-card{min-width:0;min-height:255px;padding:30px 25px;gap:13px}
+.page-card h2{font-size:clamp(21px,1.65vw,29px);line-height:1.18}
+.page-card p{font-size:14px;line-height:1.55}
+.step h2{margin-top:0}
+.contact-page-columns{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:5vw}
+.contact-page-columns>*{min-width:0}
+.contact-method a{font-size:clamp(16px,1.48vw,22px);white-space:nowrap;word-break:normal;overflow-wrap:normal;letter-spacing:-.025em}
+.contact-method a[href^="tel:"]{font-size:clamp(20px,2vw,27px)}
+@media(max-width:1100px){.page-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-card h2{font-size:clamp(23px,2.5vw,31px)}}
+@media(max-width:800px){.contact-page-columns{grid-template-columns:1fr}}
+@media(max-width:640px){.page-card-grid{grid-template-columns:1fr}.page-card{min-height:185px}.contact-method a{font-size:clamp(13px,3.5vw,19px)}}
